@@ -7,8 +7,8 @@ import json
 
 username = "admin"
 password = "admin"
-database = "mefiz"
-collection = "collection_5"
+database = "mefiz.com"
+collection = "authUser"
 
 schema = {
     "username":"Unique",
