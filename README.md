@@ -76,6 +76,48 @@ update_data = {
 result = db.update(1,update_data)
 ```
 
+## Delete 
+Deletes a document from the database by its unique identifier (`id`)
+
+```python
+result = db.delete(1)
+```
+
+## GetByID
+The unique identifier (ID) of the document you want to retrieve specific object or an error if the document does not exist.
+
+```python
+result = db.getbyID(1)
+```
+
+## Get All Object
+The `getAll` method retrieves all documents from the specified collection in the database.
+```python
+result = db.getAll()
+```
+## Count 
+The `count` method returns the total number of documents (or objects) present in the specified collection in the database.
+
+```python
+result = db.count()
+```
+## GetByKey
+The `getbykey` method retrieves all documents from the database where the specified key-value pair matches. `Not Support multi keys values pairs`
+```python
+result = db.getbykey({
+    "username":"momin"
+ })
+
+```
+
+## GeyByKeyCount
+The `getbykeyCount` method counts the number of documents in the collection where the specified key-value pair matches.
+```python
+result = db.getbykeyCount({
+    "username":"momin"
+    })
+```
+
 # Documentation
 open Github repository for the WebRaft Python library. The link is included in the package's documentation to provide
 users with access to the source code and additional information about the library.
