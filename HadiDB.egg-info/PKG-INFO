@@ -1,19 +1,28 @@
-from setuptools import setup, find_packages
+Metadata-Version: 2.1
+Name: HadiDB
+Version: 0.1
+Summary: HadiDB is a lightweight, extremely horizontally scalable database written in Python.
+Author: mominiqbal1234
+Author-email: <mominiqbal1214@gmail.com>
+Keywords: webraft,WebRaftpython,django,jwt,jwt for django,create api key,read api key,create token,read token,user agent django,ip info python,user agent python,jwt flask,jwt bottle,jwt fastapi
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: django
+Requires-Dist: djangorestframework
+Requires-Dist: PyJWT
+Requires-Dist: fastapi
+Requires-Dist: flask
+Requires-Dist: bottle
+Requires-Dist: cryptography
+Requires-Dist: user-agents
+Requires-Dist: django-user-agents
 
 
-
-VERSION = '0.1'
-DESCRIPTION = "HadiDB is a lightweight, extremely horizontally scalable database written in Python."
-
-
-# Setting up
-setup(
-    name="HadiDB",
-    version=VERSION,
-    author="mominiqbal1234",
-    author_email="<mominiqbal1214@gmail.com>",
-    description=DESCRIPTION,
-    long_description="""
 # HadiDB
 HadiDB is a lightweight, extremely horizontally scalable database written in Python
 
@@ -192,17 +201,4 @@ Check Our Site : https://mefiz.com/about </br>
 Developed by : Momin Iqbal
 
 
-    """,
-    long_description_content_type="text/markdown",
-    packages=find_packages(),
-    install_requires=["django","djangorestframework","PyJWT","fastapi","flask","bottle",'cryptography',"user-agents","django-user-agents"],
-    keywords=['webraft','WebRaft''python', 'django', 'jwt', 'jwt for django','create api key','read api key','create token','read token','user agent django','ip info python','user agent python','jwt flask','jwt bottle','jwt fastapi'],
-    classifiers=[
-        "Development Status :: 1 - Planning",
-        "Intended Audience :: Developers",
-        "Programming Language :: Python :: 3",
-        "Operating System :: Unix",
-        "Operating System :: MacOS :: MacOS X",
-        "Operating System :: Microsoft :: Windows",
-    ]
-)
+    

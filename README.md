@@ -135,7 +135,7 @@ Deletes a specific collection from a database using the `deleteCollection()` met
 from HadiDB.operation import DatabaseDeletionService
 
 db = DatabaseDeletionService(username,password,database,collection)
-db.deleteCollection()
+print(db.deleteCollection())
 ```
 ## Delete Database 
 Deletes Database using the `deleteDatabase()` method of the `DatabaseDeletionService` class.
@@ -143,7 +143,7 @@ Deletes Database using the `deleteDatabase()` method of the `DatabaseDeletionSer
 from HadiDB.operation import DatabaseDeletionService
 
 db = DatabaseDeletionService(username,password,database,collection)
-db.deleteDatabase()
+print(db.deleteDatabase())
 ```
 
 
@@ -167,7 +167,8 @@ print(Configuration(database).get_collection())
 Return Schema of a specific collection by using ` get_schema() `method from the `Configuration` class.
 ```python
 from HadiDB.operation import Configuration
-
+database = "mefiz.com"
+collection = "authUser"
 print(Configuration(database,collection).get_schema())
 ```
 
