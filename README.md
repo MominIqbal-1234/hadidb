@@ -18,7 +18,7 @@ user.authentication() # Authenticating the HadiDB user
 ```
 ##### Result:
 
-```josn
+```
 {'status': 200, 'message': 'Database user Created'}
 ```
 
@@ -70,7 +70,7 @@ result = db.insert(data)
 print(result)
 ```
 ##### Result:
-```json
+```
 {
 'status': 200, 
 'message': 'Data insert successfully',
@@ -83,8 +83,6 @@ print(result)
      'id': 1
      }
 }
-
-
 ```
 
 ## Update Data
@@ -113,7 +111,7 @@ result = db.update(1,update_data)
 print(result)
 ```
 ##### Result:
-```json
+```
 {
     'status': 200, 
     'message': 'Data Update successfully',
@@ -174,7 +172,7 @@ result = db.count()
 print(result)
 ```
 ##### Result:
-```json
+```
 {'status': 200, 'count': 1}
 ```
 
@@ -197,7 +195,7 @@ result = db.delete(1)
 print(result)
 ```
 ##### Reuslt:
-```json
+```
 {'status': 200, 'message': 'data delete successful'}
 ```
 
