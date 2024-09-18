@@ -44,6 +44,12 @@ Insert Data into the Collection use `db.insert(data)` inserts the `data` into th
 ```python
 from HadiDB.operation import Operation
 
+username = "admin"
+password = "admin"
+database = "mefiz.com"
+collection = "authUser"
+
+
 db = Operation(username,password,database,collection)
 
 data = {
@@ -61,6 +67,12 @@ result = db.insert(data)
 Update Data `db.update(1, update_data)` updates the record with the ID `1` in the database using the provided `update_data`.
 ```python
 from HadiDB.operation import Operation
+
+username = "admin"
+password = "admin"
+database = "mefiz.com"
+collection = "authUser"
+
 
 db = Operation(username,password,database,collection)
 
@@ -180,6 +192,6 @@ db = DatabaseDeletionService(username,password,database,collection)
 print(db.deleteDatabase())
 ```
 
-
-Check Our Site : https://mefiz.com/about </br>
-Developed by : Momin Iqbal
+##### GitHub : https://github.com/MominIqbal-1234/hadidb
+##### Check Our Site : https://mefiz.com/about </br>
+##### Developed by : Momin Iqbal

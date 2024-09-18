@@ -1,8 +1,14 @@
-from HadiDB.operation import Configuration
+from HadiDB.operation import Operation
 
-database = "mefiz.com"
-collection = "authUser"
-from HadiDB.operation import Configuration
+db = Operation(username,password,database,collection)
 
-print(Configuration().get_database())
-print(Configuration(database,collection).get_schema())
+data = {
+    "username":"hadidb",
+    "password":"12345",
+    "cnic":"123232442",
+    "picture":"user/my/hadidb.jpg",
+    "bio":"HadiDB is the Best ;)"
+}
+
+
+result = db.insert(data)
