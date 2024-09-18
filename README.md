@@ -118,12 +118,58 @@ result = db.getbykeyCount({
     })
 ```
 
-# Documentation
-open Github repository for the WebRaft Python library. The link is included in the package's documentation to provide
-users with access to the source code and additional information about the library.
-<br>
-https://github.com/MominIqbal-1234/hadidb
+## GetByKeys
 
+The getbykeys function uses an implicit `AND (&&)`operation. Both conditions `Example (cnic and bio)` if matched key values in the database then return the matched object.
+
+```python
+result = db.getbykeys({
+    "cnic":"123232442",
+    "bio":"HadiDB is the Best ;) update bio"
+})
+```
+
+## Delete Collection
+Deletes a specific collection from a database using the `deleteCollection()` method of the `DatabaseDeletionService` class.
+```python
+from HadiDB.operation import DatabaseDeletionService
+
+db = DatabaseDeletionService(username,password,database,collection)
+db.deleteCollection()
+```
+## Delete Database 
+Deletes Database using the `deleteDatabase()` method of the `DatabaseDeletionService` class.
+```python
+from HadiDB.operation import DatabaseDeletionService
+
+db = DatabaseDeletionService(username,password,database,collection)
+db.deleteDatabase()
+```
+
+
+## Get All Database 
+Retrieves all available databases by using the `get_database()` method of the `Configuration` class
+```python
+from HadiDB.operation import Configuration
+
+print(Configuration().get_database())
+```
+## Get All Collection
+Retrieves all collections from a specific database using the `get_collection() ` method of the `Configuration` class.
+
+```python
+from HadiDB.operation import Configuration
+
+database = "mefiz.com"
+print(Configuration(database).get_collection())
+```
+## Get Schema of Specfic Collection
+Return Schema of a specific collection by using ` get_schema() `method from the `Configuration` class.
+```python
+from HadiDB.operation import Configuration
+
+print(Configuration(database,collection).get_schema())
+```
 
 
 Check Our Site : https://mefiz.com/about </br>
