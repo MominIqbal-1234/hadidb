@@ -16,6 +16,11 @@ user = User("admin", "admin")
 user.createUser() # Creating a new user in the HadiDB
 user.authentication() # Authenticating the HadiDB user
 ```
+##### Result:
+
+```josn
+{'status': 200, 'message': 'Database user Created'}
+```
 
 
 ## Create Databse , Collection and Schema
@@ -62,7 +67,26 @@ data = {
 
 
 result = db.insert(data)
+print(result)
 ```
+##### Result:
+```json
+{
+'status': 200, 
+'message': 'Data insert successfully',
+'data': {
+    'username': 'hadidb', 
+    'password': '12345', 
+    'cnic': '123232442', 
+    'picture': 'user/my/hadidb.jpg', 
+    'bio': 'HadiDB is the Best ;)',
+     'id': 1
+     }
+}
+
+
+```
+
 ## Update Data
 Update Data `db.update(1, update_data)` updates the record with the ID `1` in the database using the provided `update_data`.
 ```python
@@ -86,19 +110,38 @@ update_data = {
 }
 
 result = db.update(1,update_data)
+print(result)
 ```
+##### Result:
+```json
+{
+    'status': 200, 
+    'message': 'Data Update successfully',
+    'data': {
+    'username': 'hadidb_update', 
+    'password': '123455', 
+    'cnic': '1232324423', 
+    'picture': 'user/my/hadidb1.jpg', 
+    'bio': 'HadiDB is the Best ;) update bio', 
+    'id': 1
+    }
+}
+```
+
 
 ## GetByID
 The unique identifier (ID) of the document you want to retrieve specific object or an error if the document does not exist.
 
 ```python
 result = db.getbyID(1)
+print(result)
 ```
 
 ## Get All Object
 The `getAll` method retrieves all documents from the specified collection in the database.
 ```python
 result = db.getAll()
+print(result)
 ```
 
 ## GetByKey
@@ -107,6 +150,7 @@ The `getbykey` method retrieves all documents from the database where the specif
 result = db.getbykey({
     "username":"momin"
  })
+print(result)
 ```
 
 ## GetByKeys
@@ -118,6 +162,7 @@ result = db.getbykeys({
     "cnic":"123232442",
     "bio":"HadiDB is the Best ;) update bio"
 })
+print(result)
 ```
 
 
@@ -126,8 +171,12 @@ The `count` method returns the total number of documents (or objects) present in
 
 ```python
 result = db.count()
+print(result)
 ```
-
+##### Result:
+```json
+{'status': 200, 'count': 1}
+```
 
 ## GeyByKeyCount
 The `getbykeyCount` method counts the number of documents in the collection where the specified key-value pair matches.
@@ -145,6 +194,11 @@ Deletes a document from the database by its unique identifier (`id`)
 
 ```python
 result = db.delete(1)
+print(result)
+```
+##### Reuslt:
+```json
+{'status': 200, 'message': 'data delete successful'}
 ```
 
 

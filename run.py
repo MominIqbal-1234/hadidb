@@ -1,14 +1,14 @@
 from HadiDB.operation import Operation
 
+username = "admin"
+password = "admin"
+database = "mefiz.com"
+collection = "authUser"
+
+
 db = Operation(username,password,database,collection)
 
-data = {
-    "username":"hadidb",
-    "password":"12345",
-    "cnic":"123232442",
-    "picture":"user/my/hadidb.jpg",
-    "bio":"HadiDB is the Best ;)"
-}
 
 
-result = db.insert(data)
+result = db.delete(1)
+print(result)
