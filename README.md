@@ -76,13 +76,6 @@ update_data = {
 result = db.update(1,update_data)
 ```
 
-## Delete 
-Deletes a document from the database by its unique identifier (`id`)
-
-```python
-result = db.delete(1)
-```
-
 ## GetByID
 The unique identifier (ID) of the document you want to retrieve specific object or an error if the document does not exist.
 
@@ -95,27 +88,13 @@ The `getAll` method retrieves all documents from the specified collection in the
 ```python
 result = db.getAll()
 ```
-## Count 
-The `count` method returns the total number of documents (or objects) present in the specified collection in the database.
 
-```python
-result = db.count()
-```
 ## GetByKey
 The `getbykey` method retrieves all documents from the database where the specified key-value pair matches. `Not Support multi keys values pairs`
 ```python
 result = db.getbykey({
     "username":"momin"
  })
-
-```
-
-## GeyByKeyCount
-The `getbykeyCount` method counts the number of documents in the collection where the specified key-value pair matches.
-```python
-result = db.getbykeyCount({
-    "username":"momin"
-    })
 ```
 
 ## GetByKeys
@@ -129,21 +108,31 @@ result = db.getbykeys({
 })
 ```
 
-## Delete Collection
-Deletes a specific collection from a database using the `deleteCollection()` method of the `DatabaseDeletionService` class.
-```python
-from HadiDB.operation import DatabaseDeletionService
 
-db = DatabaseDeletionService(username,password,database,collection)
-print(db.deleteCollection())
+## Count 
+The `count` method returns the total number of documents (or objects) present in the specified collection in the database.
+
+```python
+result = db.count()
 ```
-## Delete Database 
-Deletes Database using the `deleteDatabase()` method of the `DatabaseDeletionService` class.
-```python
-from HadiDB.operation import DatabaseDeletionService
 
-db = DatabaseDeletionService(username,password,database,collection)
-print(db.deleteDatabase())
+
+## GeyByKeyCount
+The `getbykeyCount` method counts the number of documents in the collection where the specified key-value pair matches.
+```python
+result = db.getbykeyCount({
+    "username":"momin"
+    })
+```
+
+
+
+
+## Delete 
+Deletes a document from the database by its unique identifier (`id`)
+
+```python
+result = db.delete(1)
 ```
 
 
@@ -170,6 +159,25 @@ from HadiDB.operation import Configuration
 database = "mefiz.com"
 collection = "authUser"
 print(Configuration(database,collection).get_schema())
+```
+
+
+
+## Delete Collection
+Deletes a specific collection from a database using the `deleteCollection()` method of the `DatabaseDeletionService` class.
+```python
+from HadiDB.operation import DatabaseDeletionService
+
+db = DatabaseDeletionService(username,password,database,collection)
+print(db.deleteCollection())
+```
+## Delete Database 
+Deletes Database using the `deleteDatabase()` method of the `DatabaseDeletionService` class.
+```python
+from HadiDB.operation import DatabaseDeletionService
+
+db = DatabaseDeletionService(username,password,database,collection)
+print(db.deleteDatabase())
 ```
 
 
