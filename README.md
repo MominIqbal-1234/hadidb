@@ -1,3 +1,5 @@
+[![Downloads](https://static.pepy.tech/badge/hadidb)](https://pepy.tech/project/hadidb)
+
 # HadiDB
 HadiDB is a lightweight, extremely horizontally scalable database written in Python
 
